@@ -1,0 +1,65 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: incident-backend
+  namespace: incident-intelligence
+  labels:
+    app: incident-backend
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: incident-backend
+  template:
+    metadata:
+      labels:
+        app: incident-backend
+    spec:
+      containers:
+        - name: backend
+          image: ghcr.io/your-org/incident-intelligence-backend:latest
+          ports:
+            - containerPort: 8000
+          envFrom:
+            - secretRef:
+                name: incident-secrets
+            - configMapRef:
+                name: incident-config
+          volumeMounts:
+            - name: data
+              mountPath: /app/data
+          resources:
+            requests:
+              memory: "2Gi"
+              cpu: "500m"
+            limits:
+              memory: "4Gi"
+              cpu: "2000m"
+          livenessProbe:
+            httpGet:
+              path: /health
+              port: 8000
+            initialDelaySeconds: 90
+            periodSeconds: 20
+          readinessProbe:
+            httpGet:
+              path: /health
+              port: 8000
+            initialDelaySeconds: 60
+            periodSeconds: 10
+      volumes:
+        - name: data
+          persistentVolumeClaim:
+            claimName: incident-data-pvc
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: incident-backend
+  namespace: incident-intelligence
+spec:
+  selector:
+    app: incident-backend
+  ports:
+    - port: 8000
+      targetPort: 8000

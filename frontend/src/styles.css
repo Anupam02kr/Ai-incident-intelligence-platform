@@ -1,0 +1,173 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, sans-serif;
+  font-size: 15px;
+  line-height: 1.45;
+  color: #1a1a1a;
+  background: #f4f4f1;
+}
+
+.wrap {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1.5rem 1rem 3rem;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.sub {
+  margin: 0.2rem 0 0;
+  color: #555;
+}
+
+.flash {
+  background: #fff9db;
+  border: 1px solid #e8d76b;
+  padding: 0.5rem 0.75rem;
+  margin: 1rem 0;
+}
+
+.cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.wide {
+  grid-column: 1 / -1;
+}
+
+@media (max-width: 720px) {
+  .cols {
+    grid-template-columns: 1fr;
+  }
+}
+
+.panel {
+  background: #fff;
+  border: 1px solid #d8d8d0;
+  border-radius: 6px;
+  padding: 1rem;
+}
+
+.panel h2 {
+  margin: 0 0 0.75rem;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.panel h2.gap {
+  margin-top: 1.25rem;
+}
+
+.panel h3 {
+  margin: 0 0 0.35rem;
+  font-size: 0.8rem;
+  color: #666;
+  text-transform: lowercase;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+input,
+textarea,
+button {
+  font: inherit;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 0.45rem 0.55rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+textarea.mono,
+pre {
+  font-family: ui-monospace, Consolas, monospace;
+  font-size: 0.82rem;
+}
+
+button {
+  width: fit-content;
+  padding: 0.45rem 0.9rem;
+  background: #2c5282;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:disabled {
+  opacity: 0.55;
+}
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.list button {
+  width: 100%;
+  text-align: left;
+  background: #f8f8f6;
+  color: inherit;
+  border: 1px solid #e0e0da;
+  padding: 0.5rem 0.6rem;
+  margin-bottom: 0.35rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.list button.picked {
+  border-color: #2c5282;
+  background: #eef3fa;
+}
+
+.dim {
+  color: #777;
+  margin: 0;
+}
+
+.ticket-name {
+  margin: 0 0 0.5rem;
+  font-weight: 600;
+}
+
+.out,
+.out-grid pre {
+  background: #f8f8f6;
+  border: 1px solid #e4e4de;
+  padding: 0.6rem;
+  border-radius: 4px;
+  white-space: pre-wrap;
+  max-height: 200px;
+  overflow: auto;
+}
+
+.out-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+}
+
+@media (max-width: 600px) {
+  .out-grid {
+    grid-template-columns: 1fr;
+  }
+}
