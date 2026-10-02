@@ -1,0 +1,181 @@
+text,category
+"Intermittent packet loss observed between web-frontend and db-replica-2, causing dropped requests.",Network
+Kubernetes evicted a pod for worker-7 on 10.0.4.19 due to memory pressure.,Resource Exhaustion
+"Feature flag misconfigured for worker-7, rolled out to 100% instead of 5%.",Configuration
+"Disk usage on db-replica-2 crossed 90%, payment-service logs filling the remaining space.",Resource Exhaustion
+Foreign key constraint violation blocking writes to auth-service on 10.0.4.12.,Database
+Unhandled exception in order-service's webhook handler causing dropped events.,Application Error
+Background worker for cache-node-3 crashing repeatedly with a stack overflow.,Application Error
+web-frontend pointing at the staging database instead of production on prod-app-03.,Configuration
+"Replication lag on db-primary growing steadily, replica falling behind primary.",Database
+Off-by-one bug in api-gateway's pagination logic causing duplicate results.,Application Error
+cache-node-3 started with the wrong environment file after the last deploy.,Configuration
+"OAuth callback failing for api-gateway, redirect URI mismatch in provider config.",Authentication
+Connection to payment-service timed out after repeated retries from db-primary.,Network
+"payment-service swap usage climbing steadily on prod-app-03, performance degrading.",Resource Exhaustion
+inventory-db on 10.0.4.19 hit 95% memory usage before the container was OOM killed.,Resource Exhaustion
+Kubernetes evicted a pod for auth-service on prod-app-03 due to memory pressure.,Resource Exhaustion
+"Disk usage on prod-app-03 crossed 90%, user-db logs filling the remaining space.",Resource Exhaustion
+Index corruption suspected in payment-service after unexpected restart on 10.0.4.12.,Database
+"auth-service config reload picked up a malformed YAML file, service degraded.",Configuration
+api-gateway pointing at the staging database instead of production on prod-app-03.,Configuration
+"auth-service reporting connection refused on port 8080, upstream may be down.",Network
+Missing environment variable caused user-db to fall back to default settings.,Configuration
+web-frontend returning malformed JSON responses since the last code change.,Application Error
+inventory-db returning malformed JSON responses since the last code change.,Application Error
+Kubernetes evicted a pod for payment-service on 10.0.4.19 due to memory pressure.,Resource Exhaustion
+Session tokens for inventory-db being invalidated prematurely after deploy.,Authentication
+"Repeated failed login attempts for the same account on web-frontend, possible brute force.",Authentication
+"worker-7 memory leak suspected, RSS growing steadily over several hours on prod-app-03.",Application Error
+"cache-node-3 swap usage climbing steadily on db-replica-2, performance degrading.",Resource Exhaustion
+"File descriptor limit reached on user-db, new connections being refused.",Resource Exhaustion
+payment-service returning malformed JSON responses since the last code change.,Application Error
+inventory-db still using the old API endpoint after the migration on db-replica-2.,Configuration
+"Load balancer health checks failing for auth-service, node removed from rotation.",Network
+"CPU pegged at 100% on prod-app-03, web-frontend requests queuing and timing out.",Resource Exhaustion
+Slow query log on auth-service shows full table scans on the orders table.,Database
+"Schema migration on inventory-db left an index missing, queries scanning the full table.",Database
+inventory-db started with the wrong environment file after the last deploy.,Configuration
+"api-gateway rejecting valid tokens as expired, clock skew suspected on db-primary.",Authentication
+"Repeated failed login attempts for the same account on api-gateway, possible brute force.",Authentication
+"Thread pool exhausted in inventory-db, background jobs stuck in the queue.",Resource Exhaustion
+user-db on db-primary hit 95% memory usage before the container was OOM killed.,Resource Exhaustion
+"Repeated failed login attempts for the same account on worker-7, possible brute force.",Authentication
+api-gateway returning 500 errors intermittently after the last release.,Application Error
+"worker-7 reporting connection refused on port 6379, upstream may be down.",Network
+"OAuth callback failing for web-frontend, redirect URI mismatch in provider config.",Authentication
+cache-node-3 crashing on startup due to a missing dependency after the last deploy.,Application Error
+"Connection pool exhausted for inventory-db, new requests queuing indefinitely.",Database
+"payment-service query latency spiking, several queries exceeding 30s on 10.0.4.12.",Database
+"cache-node-3 swap usage climbing steadily on 10.0.4.12, performance degrading.",Resource Exhaustion
+worker-7 still using the old API endpoint after the migration on prod-app-03.,Configuration
+"TLS handshake failure connecting to 10.0.4.19:6379, certificate may be expired.",Network
+worker-7 returning 500 errors intermittently after the last release.,Application Error
+Unhandled exception in payment-service's webhook handler causing dropped events.,Application Error
+"Connection pool exhausted for web-frontend, new requests queuing indefinitely.",Database
+worker-7 crashing on startup due to a missing dependency after the last deploy.,Application Error
+Unhandled exception in auth-service's webhook handler causing dropped events.,Application Error
+High latency spikes on the link between auth-service and 10.0.4.12 during peak traffic.,Network
+"order-service swap usage climbing steadily on 10.0.4.19, performance degrading.",Resource Exhaustion
+payment-service started with the wrong environment file after the last deploy.,Configuration
+"Disk usage on prod-app-03 crossed 90%, inventory-db logs filling the remaining space.",Resource Exhaustion
+Connection to cache-node-3 timed out after repeated retries from 10.0.4.12.,Network
+"payment-service swap usage climbing steadily on prod-app-01, performance degrading.",Resource Exhaustion
+MFA verification timing out for users authenticating through web-frontend.,Authentication
+"OAuth callback failing for payment-service, redirect URI mismatch in provider config.",Authentication
+"Replication lag on 10.0.4.12 growing steadily, replica falling behind primary.",Database
+"Intermittent packet loss observed between web-frontend and prod-app-03, causing dropped requests.",Network
+"TLS handshake failure connecting to prod-app-01:5432, certificate may be expired.",Network
+"Load balancer health checks failing for user-db, node removed from rotation.",Network
+High latency spikes on the link between web-frontend and prod-app-03 during peak traffic.,Network
+"Disk I/O wait times elevated on 10.0.4.12, database writes slowing down.",Database
+Index corruption suspected in worker-7 after unexpected restart on db-replica-2.,Database
+Off-by-one bug in web-frontend's pagination logic causing duplicate results.,Application Error
+"CPU pegged at 100% on prod-app-01, auth-service requests queuing and timing out.",Resource Exhaustion
+"Connection pool exhausted for payment-service, new requests queuing indefinitely.",Database
+worker-7 still using the old API endpoint after the migration on db-replica-2.,Configuration
+"api-gateway returning 401 for previously working API keys, rotation may have failed.",Authentication
+High latency spikes on the link between order-service and db-replica-2 during peak traffic.,Network
+"inventory-db returning 401 for previously working API keys, rotation may have failed.",Authentication
+"Repeated failed login attempts for the same account on payment-service, possible brute force.",Authentication
+"cache-node-3 autovacuum falling behind, table bloat degrading query performance.",Database
+"Feature flag misconfigured for user-db, rolled out to 100% instead of 5%.",Configuration
+"inventory-db reporting connection refused on port 3306, upstream may be down.",Network
+"Deadlock detected in web-frontend transaction log, two sessions blocking each other.",Database
+"Intermittent packet loss observed between payment-service and prod-app-01, causing dropped requests.",Network
+web-frontend serialization error when processing malformed input from a client.,Application Error
+Background worker for order-service crashing repeatedly with a stack overflow.,Application Error
+user-db pointing at the staging database instead of production on 10.0.4.19.,Configuration
+High latency spikes on the link between auth-service and db-primary during peak traffic.,Network
+Kubernetes evicted a pod for worker-7 on prod-app-01 due to memory pressure.,Resource Exhaustion
+"OAuth callback failing for order-service, redirect URI mismatch in provider config.",Authentication
+Background worker for inventory-db crashing repeatedly with a stack overflow.,Application Error
+"CPU pegged at 100% on 10.0.4.12, api-gateway requests queuing and timing out.",Resource Exhaustion
+High latency spikes on the link between cache-node-3 and prod-app-01 during peak traffic.,Network
+"Thread pool exhausted in payment-service, background jobs stuck in the queue.",Resource Exhaustion
+"Disk I/O wait times elevated on 10.0.4.19, database writes slowing down.",Database
+"TLS handshake failure connecting to 10.0.4.12:5432, certificate may be expired.",Network
+"auth-service reporting connection refused on port 443, upstream may be down.",Network
+"Feature flag misconfigured for auth-service, rolled out to 100% instead of 5%.",Configuration
+"auth-service reporting too many connections, max_connections limit reached.",Database
+"Thread pool exhausted in order-service, background jobs stuck in the queue.",Resource Exhaustion
+"Feature flag misconfigured for order-service, rolled out to 100% instead of 5%.",Configuration
+"Disk I/O wait times elevated on db-primary, database writes slowing down.",Database
+api-gateway still using the old API endpoint after the migration on 10.0.4.19.,Configuration
+payment-service still using the old API endpoint after the migration on 10.0.4.12.,Configuration
+"cache-node-3 rejecting valid tokens as expired, clock skew suspected on 10.0.4.12.",Authentication
+"web-frontend autovacuum falling behind, table bloat degrading query performance.",Database
+"OAuth callback failing for worker-7, redirect URI mismatch in provider config.",Authentication
+"Deployment of worker-7 introduced a regression, error rate up sharply on 10.0.4.19.",Application Error
+"Load balancer health checks failing for api-gateway, node removed from rotation.",Network
+Incorrect timeout value in web-frontend config causing premature request cancellation.,Configuration
+Kubernetes evicted a pod for payment-service on prod-app-01 due to memory pressure.,Resource Exhaustion
+Kubernetes evicted a pod for web-frontend on db-replica-2 due to memory pressure.,Resource Exhaustion
+"Repeated failed login attempts for the same account on order-service, possible brute force.",Authentication
+inventory-db throwing unhandled null reference exceptions on the checkout path.,Application Error
+"cache-node-3 rejecting valid tokens as expired, clock skew suspected on 10.0.4.19.",Authentication
+"Replication lag on 10.0.4.19 growing steadily, replica falling behind primary.",Database
+Incorrect timeout value in inventory-db config causing premature request cancellation.,Configuration
+"payment-service reporting connection refused on port 9092, upstream may be down.",Network
+"Intermittent packet loss observed between web-frontend and db-primary, causing dropped requests.",Network
+"auth-service write-ahead log growing unbounded, checkpoint process stalled.",Database
+"Intermittent packet loss observed between inventory-db and 10.0.4.12, causing dropped requests.",Network
+"web-frontend returning 401 for previously working API keys, rotation may have failed.",Authentication
+"cache-node-3 memory leak suspected, RSS growing steadily over several hours on db-primary.",Application Error
+"DNS resolution failed for payment-service, requests falling back to stale cached IP.",Network
+Slow query log on api-gateway shows full table scans on the orders table.,Database
+High latency spikes on the link between web-frontend and 10.0.4.19 during peak traffic.,Network
+"user-db autovacuum falling behind, table bloat degrading query performance.",Database
+Slow query log on payment-service shows full table scans on the orders table.,Database
+api-gateway still using the old API endpoint after the migration on db-primary.,Configuration
+Incorrect timeout value in api-gateway config causing premature request cancellation.,Configuration
+"Intermittent packet loss observed between payment-service and db-replica-2, causing dropped requests.",Network
+"user-db rejecting valid tokens as expired, clock skew suspected on 10.0.4.19.",Authentication
+auth-service still using the old API endpoint after the migration on prod-app-01.,Configuration
+Off-by-one bug in order-service's pagination logic causing duplicate results.,Application Error
+"auth-service autovacuum falling behind, table bloat degrading query performance.",Database
+"Deployment of inventory-db introduced a regression, error rate up sharply on 10.0.4.19.",Application Error
+"Deadlock detected in user-db transaction log, two sessions blocking each other.",Database
+cache-node-3 still using the old API endpoint after the migration on prod-app-01.,Configuration
+Password reset emails from web-frontend not being delivered to users.,Authentication
+"auth-service query latency spiking, several queries exceeding 30s on db-replica-2.",Database
+"api-gateway write-ahead log growing unbounded, checkpoint process stalled.",Database
+"Replication lag on prod-app-03 growing steadily, replica falling behind primary.",Database
+Session tokens for order-service being invalidated prematurely after deploy.,Authentication
+auth-service pointing at the staging database instead of production on prod-app-03.,Configuration
+"auth-service returning 401 for previously working API keys, rotation may have failed.",Authentication
+"CPU pegged at 100% on db-replica-2, cache-node-3 requests queuing and timing out.",Resource Exhaustion
+"CPU pegged at 100% on 10.0.4.12, user-db requests queuing and timing out.",Resource Exhaustion
+"inventory-db rejecting valid tokens as expired, clock skew suspected on db-primary.",Authentication
+Race condition in user-db causing duplicate order processing under load.,Application Error
+"File descriptor limit reached on web-frontend, new connections being refused.",Resource Exhaustion
+Password reset emails from user-db not being delivered to users.,Authentication
+Race condition in worker-7 causing duplicate order processing under load.,Application Error
+order-service returning 500 errors intermittently after the last release.,Application Error
+Incorrect timeout value in cache-node-3 config causing premature request cancellation.,Configuration
+Kubernetes evicted a pod for order-service on prod-app-03 due to memory pressure.,Resource Exhaustion
+cache-node-3 returning malformed JSON responses since the last code change.,Application Error
+"worker-7 rejecting valid tokens as expired, clock skew suspected on db-primary.",Authentication
+Password reset emails from worker-7 not being delivered to users.,Authentication
+"web-frontend swap usage climbing steadily on prod-app-03, performance degrading.",Resource Exhaustion
+"Schema migration on user-db left an index missing, queries scanning the full table.",Database
+"Repeated failed login attempts for the same account on auth-service, possible brute force.",Authentication
+"DNS resolution failed for api-gateway, requests falling back to stale cached IP.",Network
+Connection to api-gateway timed out after repeated retries from 10.0.4.12.,Network
+"auth-service swap usage climbing steadily on db-replica-2, performance degrading.",Resource Exhaustion
+auth-service still using the old API endpoint after the migration on db-primary.,Configuration
+api-gateway started with the wrong environment file after the last deploy.,Configuration
+"user-db memory leak suspected, RSS growing steadily over several hours on prod-app-03.",Application Error
+auth-service pointing at the staging database instead of production on db-primary.,Configuration
+inventory-db still using the old API endpoint after the migration on prod-app-01.,Configuration
+Infinite retry loop in user-db client code hammering a downstream service.,Application Error
+Kubernetes evicted a pod for web-frontend on prod-app-01 due to memory pressure.,Resource Exhaustion
+Session tokens for api-gateway being invalidated prematurely after deploy.,Authentication
+"Intermittent packet loss observed between worker-7 and prod-app-03, causing dropped requests.",Network
+"payment-service write-ahead log growing unbounded, checkpoint process stalled.",Database
+Unhandled exception in api-gateway's webhook handler causing dropped events.,Application Error
+High latency spikes on the link between auth-service and db-replica-2 during peak traffic.,Network
+"Deployment of cache-node-3 introduced a regression, error rate up sharply on prod-app-03.",Application Error
+Session tokens for auth-service being invalidated prematurely after deploy.,Authentication
+Missing environment variable caused order-service to fall back to default settings.,Configuration
+Session tokens for web-frontend being invalidated prematurely after deploy.,Authentication

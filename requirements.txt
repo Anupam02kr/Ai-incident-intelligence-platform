@@ -1,0 +1,42 @@
+
+--extra-index-url https://download.pytorch.org/whl/cu121
+
+# --- Web app + API ---
+streamlit==1.38.0
+fastapi==0.115.0
+uvicorn[standard]==0.30.6
+python-multipart==0.0.9      # needed by FastAPI for file uploads
+
+# --- Core ML / NLP ---
+# pinned — these are what the model-loading and quantization code was built and tested against
+torch==2.4.1
+transformers==4.44.2
+accelerate==0.34.2          
+bitsandbytes==0.43.3        
+sentence-transformers==3.1.1
+
+# --- Classifier ---
+scikit-learn>=1.5
+xgboost>=2.1
+
+# --- Retrieval / vector store ---
+chromadb==1.5.5
+
+# --- Log parsing ---
+drain3==0.9.11
+
+# --- OCR (CPU, deliberately — see note above) ---
+easyocr==1.7.2
+pillow>=10.0
+# pytesseract==0.3.13        
+
+# --- Data handling ---
+pandas>=2.2
+numpy>=1.26
+
+# --- Charts ---
+plotly>=5.24
+
+# --- Utilities ---
+pydantic>=2.9
+python-dotenv>=1.0
