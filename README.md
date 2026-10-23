@@ -37,9 +37,6 @@ Streamlit UI  →  FastAPI backend
               XGBoost classifier (independent second opinion)
 ```
 
-Full requirements are in `SRS_AI_Incident_Intelligence_Platform.pdf`
-and `PRD_AI_Incident_Intelligence_Platform.pdf`.
-
 ## Features
 
 - **Log parsing** for heterogeneous formats (HDFS, OpenSSH out of the
@@ -172,9 +169,6 @@ incident-intelligence/
 ```
 
 ## Limitations
-
-This matters more than the metrics table above, so it gets its own
-section rather than a footnote.
 
 **This system cannot solve a genuinely novel problem it has no
 knowledge of.** It's RAG-based: the LLM only reasons using the
